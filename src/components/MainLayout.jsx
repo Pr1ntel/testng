@@ -2,9 +2,8 @@ import React from 'react';
 import {useState} from "react";
 import {MenuFoldOutlined, MenuUnfoldOutlined, MinusOutlined, PlusOutlined, VideoCameraOutlined,} from '@ant-design/icons';
 import {Avatar, Button, Layout, Menu, theme} from 'antd';
-
 import {Link, Outlet} from "react-router-dom";
-import Main from "./Main";
+
 
 const MainLayout = () => {
 
