@@ -3,6 +3,7 @@ import Main from "./components/Main";
 import MainLayout from "./components/MainLayout";
 import Projects from "./components/projects/Projects";
 import Tasks from "./components/tasks/Tasks";
+import Users from "./components/users/Users";
 
 const App = () => {
 
@@ -13,6 +14,7 @@ const App = () => {
                 <Route path="/main" element={<Main/>}/>
                  <Route path="/main/projects" element={<Projects/>}/>
                  <Route path="/main/tasks" element={<Tasks/>}/>
+                 <Route path="/main/users" element={<Users/>}/>
 
 
                 </Route>

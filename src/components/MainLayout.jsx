@@ -53,7 +53,7 @@ const MainLayout = () => {
                             key: '5',
                             icon: <MinusOutlined />,
                             label: <Link
-                                to='/secure/delete-films'>
+                                to='/main/users'>
                                 Пользователи
                             </Link>,
                         },

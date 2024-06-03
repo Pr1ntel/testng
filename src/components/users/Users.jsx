@@ -1,8 +1,7 @@
 import {Table} from "antd";
 import {useEffect, useState} from "react";
 import Api from "../../api/api";
-import AddTaskModel from "./AddTaskModel";
-import DeleteTask from "./DeleteTaskModel";
+
 
 const columns = [
     {
@@ -11,48 +10,32 @@ const columns = [
         width: 15,
     },
     {
-        title: 'Название',
-        dataIndex: 'taskTitle',
+        title: 'Имя',
+        dataIndex: 'firstName',
         width: 150,
     },
     {
-        title: 'Описание задачи',
-        dataIndex: 'taskDescription',
+        title: 'Фамилия',
+        dataIndex: 'lastName',
         width: 150,
     },
     {
-        title: 'Исполнитель',
-        dataIndex: 'executorId',
+        title: 'Логин',
+        dataIndex: 'login',
         width: 150,
     },
     {
-        title: 'Этап',
-        dataIndex: 'taskStageId',
-        width: 150,
-    },
-    {
-        title: 'Время выполнения',
-        dataIndex: 'taskDurationTime',
-        width: 100,
-        render: (text, record) => `${text}  ${record.taskDurationTermId}`
-    },
-    {
-        title: 'Приоритет',
-        dataIndex: 'priorityTypeId',
-        width: 150,
-    },
-    {
-        title: 'Проект',
-        dataIndex: 'projectName',
+        title: 'Роль',
+        dataIndex: 'roleName',
         width: 150,
     },
 ];
-const Tasks = () => {
+const Users = () => {
     const api = new Api()
     const [data, setData] = useState([])
     const getAllTasks = () => {
 
-        api.getAllTask()
+        api.getAllUsers()
             .then(response => {
                 setData(response.data)
 
@@ -73,13 +56,9 @@ const Tasks = () => {
                 pagination={{
                     pageSize: 50,
                 }}
-
             />
-            <AddTaskModel/>
-            <br/>
-            <DeleteTask/>
         </div>
     );
 }
 
-export default Tasks;
+export default Users;

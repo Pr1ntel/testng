@@ -18,6 +18,9 @@ class api {
     async getAllTask() {
         return await this.#axios.get("/all-task")
     }
+    async getAllUsers() {
+        return await this.#axios.get("/all-users")
+    }
 
     async getAllProjectStageName() {
         return await this.#axios.get("/all-project-stage-name")
@@ -44,6 +47,9 @@ class api {
     }
     async deleteProject(id) {
         return  await this.#axios.delete(`/delete-project/${id}`);
+    }
+    async deleteTask(id) {
+        return  await this.#axios.delete(`/delete-task/${id}`);
     }
 }
 
